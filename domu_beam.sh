@@ -11,3 +11,5 @@ echo $fpath
 echo "Beam this file to $dest_vm"
 
 qvm-copy-to-vm $dest_vm $fpath
+
+echo "File is transmitted!"
