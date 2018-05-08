@@ -2,8 +2,8 @@
 
 #Dom0 Beam
 
-src_dir=$1		 #Case Sensitive!
-dest_dir=$3 	 #Case Sensitive!
+src_dir=$1    #Case Sensitive!
+dest_dir=$3   #Case Sensitive!
 src_vm=$2
 dest_vm=$4
 
