@@ -1,1 +1,36 @@
 # This Cheat-Sheet inherit commands used to enable necessary communication between certain guests. 
+
+#----------Basic Stuff---------------------------------------------------------#
+# List current iptable of Qube X: 
+#+ Open Terminal Qube X:
+sudo iptables --list
+
+# Enable Communication between Qube A and Qube B:
+#+ Open Terminal Firewall VM:
+sudo iptables -I FORWARD 2 -s <IP address of A> -d <IP address of B> -j ACCEPT
+
+#+ For bidirectional communication:
+sudo iptables -I FORWARD 2 -s <IP address of B> -d <IP address of A> -j ACCEPT
+
+#+ Open Terminal Qube A: (When want to ping from B to A)
+sudo iptables -I INPUT -s <IP address of B> -j ACCEPT
+
+#+ Open Terminal Qube B: (When want to ping from A to B)
+sudo iptables -I INPUT -s <IP address of A> -j ACCEPT
+
+# Disable Communication between Qube A and Qube B:
+#+ Open Terminal Firwall VM:
+sudo iptables -D FORWARD 2 -s <IP address of A> -d <IP address of B> -j ACCEPT
+sudo iptables -D FORWARD 2 -s <IP address of B> -d <IP address of A> -j ACCEPT
+
+#+ Open Terminal Qube A: (When want to cut connection from B to A)
+sudo iptables -D INPUT -s <IP address of B> -j ACCEPT
+
+#+ Open Terminal Qube B: (When want to cut connection from A to B)
+sudo iptables -D INPUT -s <IP address of A> -j ACCEPT
+
+#Check Connection to Qube X: (On what ever Qube u are)
+ping <IP address of X>
+
+#------------------------------------------------------------------------------#
+
