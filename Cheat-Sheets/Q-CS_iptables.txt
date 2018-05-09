@@ -1,6 +1,8 @@
 # This Cheat-Sheet inherit commands used to enable necessary communication between certain guests. 
 
 #----------Basic Stuff---------------------------------------------------------#
+# [-A: append; -I: insert; -D: delete]
+
 # List current iptable of Qube X: 
 #+ Open Terminal Qube X:
 sudo iptables --list
