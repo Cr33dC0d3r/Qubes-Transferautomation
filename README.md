@@ -11,4 +11,4 @@ TODO:
 - Check inter-guest communication
 - Create Local FTP Server
 - Connect to FTP Servers from Guest
-- 
+- alternative simple TCP Communication
