@@ -8,7 +8,7 @@ Current Scripts:
 - path_finder
 
 TODO:
-- Check inter-guest communication
-- Create Local FTP Server
-- Connect to FTP Servers from Guest
-- alternative simple TCP Communication
+- script that runs init key gen
+- script that runs encrypt and signing
+- script that runs verify and decrypt
+
